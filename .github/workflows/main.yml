@@ -1,0 +1,13 @@
+on:
+  push:
+    branches:
+    - main
+jobs:
+  tree:
+    name: tree
+    uses: actions/checkout@v4.1.7
+    with: vemas23/hackerribbon
+    runs-on: ubuntu-22.04
+    run: |
+      sudo apt install tree
+      tree -H
